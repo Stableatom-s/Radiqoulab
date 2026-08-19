@@ -1,0 +1,245 @@
+.contact-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 1.5rem auto 2.5rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 1224px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow-blue);
+  padding: 2rem 2.75rem 1.75rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  margin-bottom: 1.25rem;
+}
+
+.contact-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  margin-bottom: 0.35rem;
+  line-height: 1.1;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.brief-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+}
+
+.bullet-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--dark-navy);
+  border-radius: 50%;
+}
+
+.pill-options {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.pill-options.multi-select .option-pill {
+  flex: 1 1 0;
+  white-space: nowrap;
+}
+
+.pill-options.single-select {
+  width: fit-content;
+}
+
+.pill-options.single-select .option-pill {
+  flex: none;
+}
+
+.option-pill {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1.25rem;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  background: var(--bg-white);
+  color: var(--purple-shadow);
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.15s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-pill:hover {
+  border-color: var(--primary-blue);
+}
+
+.option-pill.active {
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  border: 1.5px solid var(--border-dark);
+  box-shadow: 4px 4px 0px var(--border-dark);
+  transform: translate(-1px, -1px);
+}
+
+/* ================= DOTTED TRACK SLIDER ================= */
+.slider-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-track-area {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.slider-ticks-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  background-image: radial-gradient(circle, var(--dark-navy) 1.25px, transparent 1.25px);
+  background-size: 12px 3px;
+  background-repeat: repeat-x;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.budget-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.budget-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary-blue);
+  border: 1.5px solid var(--border-dark);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.budget-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary-blue);
+  border: 1.5px solid var(--border-dark);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-top: 0.15rem;
+}
+
+.current-value-bubble {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+}
+
+/* ================= INPUTS & FOOTER ================= */
+.underline-input,
+.underline-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1.25px solid var(--border-dark);
+  background: transparent;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  color: var(--dark-navy);
+  padding: 0.35rem 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+  resize: none;
+}
+
+.underline-input:focus,
+.underline-textarea:focus {
+  border-bottom-color: var(--primary-blue);
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.protocol-text {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pill-options.multi-select {
+    flex-wrap: wrap;
+  }
+}

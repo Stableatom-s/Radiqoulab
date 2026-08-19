@@ -1,0 +1,427 @@
+@import url(/css/global/base.css);
+@import url(/css/global/navbar.css);
+@import url(/css/global/casestudy.css);
+@import url(/css/global/testimonial.css);
+@import url(/css/global/form.css);
+@import url(/css/global/footer.css);
+
+/* =========================================
+   SERVICE PAGE WRAPPER
+========================================= */
+.service-page {
+  width: 100%;
+  max-width: 1320px;
+  margin: 3.5rem auto 4rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  color: var(--dark-navy, #080f3d);
+}
+
+/* =========================================
+   HERO
+========================================= */
+.service-hero {
+  margin-bottom: 4.5rem;
+}
+
+.service-label,
+.service-side-label,
+.next-project-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: 9999px;
+  box-shadow: 3px 3px 0 var(--border-dark, #080f3d);
+  color: var(--dark-navy, #080f3d);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.service-label span,
+.service-side-label span,
+.next-project-label span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--dark-navy, #080f3d);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.service-hero h1 {
+  max-width: 950px;
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 1.25rem 0 2rem;
+  color: var(--dark-navy, #080f3d);
+}
+
+.service-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: 4px 4px 0 var(--border-dark, #080f3d);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.service-btn-light {
+  background: var(--bg-white, #ffffff);
+  color: var(--dark-navy, #080f3d);
+}
+
+.service-btn-blue {
+  background: var(--primary-blue, #1434cb);
+  color: #ffffff;
+}
+
+.service-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--border-dark, #080f3d);
+}
+
+/* =========================================
+   CONTENT ROWS (Overview, Benefits, Problems)
+========================================= */
+.service-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  column-gap: 4rem;
+  align-items: start;
+  margin-bottom: 2.75rem;
+}
+
+.service-content {
+  min-width: 0;
+}
+
+.service-content h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--dark-navy, #080f3d);
+}
+
+.service-content p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted, #64748b);
+  font-weight: 500;
+}
+
+/* Benefit Pill Tags */
+.benefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.benefit-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: var(--radius-md, 8px);
+  background: var(--bg-white, #ffffff);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--dark-navy, #080f3d);
+  white-space: nowrap;
+}
+
+/* Problem Items */
+.problem-item {
+  margin-bottom: 1.25rem;
+}
+
+.problem-item:last-child {
+  margin-bottom: 0;
+}
+
+.problem-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-navy, #080f3d);
+}
+
+.problem-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-muted, #64748b);
+}
+
+/* =========================================
+   SERVICES 4-CARD GRID
+========================================= */
+.service-cards-row {
+  margin-top: 3.5rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.service-card {
+  position: relative;
+  min-height: 140px;
+  padding: 1.5rem 1.25rem;
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: 4px 4px 0 var(--primary-blue, #1434cb);
+  box-sizing: border-box;
+}
+
+.service-card h3 {
+  margin: 0 0 0.75rem;
+  padding-right: 28px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--dark-navy, #080f3d);
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted, #64748b);
+  font-weight: 500;
+}
+
+.service-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--primary-blue, #1434cb);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   METRICS SECTION
+========================================= */
+.metrics-section {
+  margin-top: 3.5rem;
+}
+
+.metrics-section h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--dark-navy, #080f3d);
+  margin: 0 0 1.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.metric-card {
+  min-height: 110px;
+  padding: 1.5rem;
+  background: var(--dark-navy, #080f3d);
+  color: #ffffff;
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: 5px 5px 0 var(--primary-blue, #1434cb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.metric-card strong {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.metric-card p,
+.metric-card span {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+/* =========================================
+   HOW WE RUN IT (Full-Width Cards)
+========================================= */
+.how-we-run-it {
+  width: 100%;
+  max-width: 1320px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.how-we-run-it > .service-side-label {
+  margin-bottom: 1.5rem;
+}
+
+.how-we-run-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.how-we-run-card {
+  width: 100%;
+  min-height: 75px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: 4px 4px 0 var(--primary-blue, #1434cb);
+}
+
+.how-we-run-card h3 {
+  position: relative;
+  margin: 0;
+  padding-left: 24px;
+  color: var(--dark-navy, #080f3d);
+  font-size: 1.1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.how-we-run-card h3::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16c766;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.how-we-run-card p {
+  margin: 0;
+  color: var(--dark-navy, #080f3d);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* =========================================
+   NEXT PROJECT / CTA
+========================================= */
+.next-project {
+  width: 100%;
+  max-width: 1320px;
+  margin: 4rem auto 2rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.next-project h2 {
+  margin: 1.25rem 0 0;
+  color: var(--dark-navy, #080f3d);
+  font-size: 3.25rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.next-project h2 span {
+  color: var(--primary-blue, #1434cb);
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+@media (max-width: 992px) {
+  .service-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .service-row {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    column-gap: 0;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-we-run-card {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .next-project h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .service-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .service-grid,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .next-project h2 {
+    font-size: 2rem;
+  }
+}

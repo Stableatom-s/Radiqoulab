@@ -1,0 +1,137 @@
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero-container {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-size: 4.25rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--dark-navy);
+  margin-bottom: 1.75rem;
+}
+
+.highlight-blue {
+  color: var(--primary-blue-alt);
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin-bottom: 2.75rem;
+  font-weight: 400;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stat-slider-wrapper {
+  width: 315px;
+  height: 301px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 10px 10px 0;
+  box-sizing: content-box;
+}
+
+.stat-slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card {
+  width: 315px;
+  min-width: 315px;
+  height: 301px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow-blue);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.stat-category {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+}
+
+.stat-metric {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--dark-navy);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.slider-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 20px;
+  height: 4px;
+  background-color: var(--light-border);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--dark-navy);
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+}

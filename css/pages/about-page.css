@@ -1,0 +1,223 @@
+@import url(../global/base.css);
+@import url(../global/navbar.css);
+@import url(../global/establish.css);
+@import url(../global/agency.css);
+@import url(../global/whyus.css);
+@import url(../global/industries.css);
+@import url(../global/services.css);
+@import url(../global/design-process.css);
+@import url(../global/core-value.css);
+@import url(../global/testimonial.css);
+@import url(../global/faq.css);
+@import url(../global/form.css);
+@import url(../global/footer.css);
+
+
+/* ================= ABOUT HERO LAYOUT ================= */
+.about-hero-section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 3.5rem auto 4rem auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.about-hero-container {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Badge */
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background-color: #e0e7ff;
+  color: var(--primary-blue, #1434cb);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-pill-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-blue, #1434cb);
+}
+
+/* Headings & Text */
+.about-hero-title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--dark-navy, #080f3d);
+  margin: 0 0 1.5rem 0;
+}
+
+.about-hero-title .text-blue {
+  color: var(--primary-blue, #1434cb);
+}
+
+.about-hero-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted, #64748b);
+  max-width: 580px;
+  margin: 0 0 2rem 0;
+}
+
+/* CTA Buttons */
+.about-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-hero-actions .btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-md, 8px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-actions .btn-outline {
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  color: var(--dark-navy, #080f3d);
+  box-shadow: 4px 4px 0 var(--border-dark, #080f3d);
+}
+
+.about-hero-actions .btn-solid {
+  background: var(--primary-blue, #1434cb);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  color: var(--bg-white, #ffffff);
+  box-shadow: 4px 4px 0 var(--border-dark, #080f3d);
+}
+
+.about-hero-actions .btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--border-dark, #080f3d);
+}
+
+/* ================= RIGHT FEATURE CARD (SQUARE) ================= */
+.about-hero-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-feature-card {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1; /* Makes the card perfectly square */
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #080f3d);
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: 6px 6px 0 var(--primary-blue, #1434cb);
+  padding: 2.25rem 2rem 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feature-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--dark-navy, #080f3d);
+  margin: 0 0 0.85rem 0;
+  letter-spacing: -0.01em;
+}
+
+.feature-card-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--dark-navy, #080f3d);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Dash Indicators */
+.feature-dash-indicators {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.dash-bar {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #cbd5e1;
+  transition: background-color 0.25s ease, width 0.25s ease;
+}
+
+.dash-bar.active {
+  background-color: var(--dark-navy, #080f3d);
+  width: 22px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-hero-title {
+    font-size: 2.75rem;
+  }
+
+  .about-hero-right {
+    justify-content: flex-start;
+  }
+
+  .about-feature-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-feature-card {
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,187 @@
+:root {
+  --primary-blue: #1434cb;
+  --dark-navy: #0f172a;
+  --border-dark: #0f172a;
+  --bg-white: #ffffff;
+  --text-muted: #64748b;
+  --radius-xl: 16px;
+}
+
+/* ================= SECTION CONTAINER ================= */
+.testimonials-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.testimonials-container {
+  width: 100%;
+}
+
+.section-top {
+  margin-bottom: 2rem;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background-color: #e0e7ff;
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.pill-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark-navy);
+  margin: 0;
+}
+
+/* Arrows Navigation */
+.slider-nav-btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-arrow-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-navy);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.nav-arrow-btn:hover {
+  opacity: 0.7;
+}
+
+.nav-arrow-btn:active {
+  transform: scale(0.92);
+}
+
+.nav-arrow-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ================= SLIDER TRACK CONTAINER ================= */
+.testimonial-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  padding: 10px 10px 24px 0; /* Ensures bottom-right shadow is not cut off */
+  box-sizing: border-box;
+}
+
+.testimonial-slider-container.active {
+  cursor: grabbing;
+}
+
+/* Forces all 4 cards to stay strictly in 1 single horizontal row */
+.testimonial-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 28px !important;
+  width: max-content !important;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.testimonial-track.dragging {
+  transition: none !important;
+}
+
+/* ================= EXACT CARD DESIGN ================= */
+.testimonial-card {
+  flex: 0 0 420px !important;
+  width: 420px !important;
+  min-width: 420px !important;
+  max-width: 420px !important;
+  height: 280px;
+  background: var(--bg-white, #ffffff);
+  border: 1.5px solid var(--border-dark, #0f172a);
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: 6px 6px 0px var(--primary-blue, #1434cb);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-shrink: 0 !important;
+}
+
+.card-quote-icon {
+  width: 32px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.card-quote-icon svg,
+.card-quote-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.card-quote-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--dark-navy, #0f172a);
+  margin: 0.75rem 0 auto 0;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #cbd5e1;
+  margin: 1rem 0 0.75rem 0;
+}
+
+.author-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-blue, #1434cb);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.15rem 0;
+}
+
+.author-role {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted, #64748b);
+  margin: 0;
+}
